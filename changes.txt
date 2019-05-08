@@ -1,3 +1,5 @@
+link to file: https://raw.githubusercontent.com/Maderana/pca_with_cuda/master/lab3_cuda.cu
+
 line 388 : dim3 dimGrid1((mc + TILE_DIM - 1) / TILE_DIM, (nc + TILE_DIM - 1) / TILE_DIM); -> dim3 dimGrid1((nc + TILE_DIM - 1) / TILE_DIM, (mc + TILE_DIM - 1) / TILE_DIM);
 
 line 416 : sigma[i*M + i] = (double)sqrt(evals[i].first); -> sigma[i] = (double)sqrt(evals[i].first); 
@@ -15,5 +17,3 @@ line 448: eval_sum_check += sigma[i*M+i]; -> eval_sum_check += (sigma[i])*(sigma
 line 540 : *SIGMA = (double*) calloc(N*M, sizeof(double)); -> *SIGMA = (double*) calloc(N*1, sizeof(double)); 
 
 line 567 : K = k -> *K = *k; 
-
-link to file: https://raw.githubusercontent.com/Maderana/pca_with_cuda/master/lab3_cuda.cu

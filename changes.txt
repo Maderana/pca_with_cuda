@@ -1,5 +1,7 @@
 link to file: https://raw.githubusercontent.com/Maderana/pca_with_cuda/master/lab3_cuda.cu
 
+changes done:
+
 line 388 : dim3 dimGrid1((mc + TILE_DIM - 1) / TILE_DIM, (nc + TILE_DIM - 1) / TILE_DIM); -> dim3 dimGrid1((nc + TILE_DIM - 1) / TILE_DIM, (mc + TILE_DIM - 1) / TILE_DIM);
 
 line 416 : sigma[i*M + i] = (double)sqrt(evals[i].first); -> sigma[i] = (double)sqrt(evals[i].first); 
